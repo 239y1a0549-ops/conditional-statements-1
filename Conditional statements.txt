@@ -1,0 +1,166 @@
+Conditional statements
+1. print many hello worlds
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 1000; i++) {
+            System.out.println("Hello World");
+        }
+    }
+}
+2.small medium large
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        if (a < b) {
+            System.out.println("a < b");
+        } else if (a > b) {
+            System.out.println("a > b");
+        } else {
+            System.out.println("a == b");
+        }
+    }
+}
+3. Area of rectangle
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int L = sc.nextInt();
+        int B = sc.nextInt();
+        
+        int area = L * B;
+        
+        System.out.println(area);
+    }
+}
+4. triangle validator
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int C = sc.nextInt();
+        
+        if (A + B > C && A + C > B && B + C > A) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
+5.missing number
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int sum = 0;
+        for (int i = 0; i < 99; i++) {
+            int num = sc.nextInt();
+            sum = sum + num;
+        }
+        
+        int totalSum = 5050;
+        int missing = totalSum - sum;
+        
+        System.out.println(missing);
+    }
+}
+6.second largest
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        
+        for (int i = 0; i < T; i++) {
+            int A = sc.nextInt();
+            int B = sc.nextInt();
+            int C = sc.nextInt();
+            
+            if ((A > B && A < C) || (A < B && A > C)) {
+                System.out.println(A);
+            } else if ((B > A && B < C) || (B < A && B > C)) {
+                System.out.println(B);
+            } else {
+                System.out.println(C);
+            }
+        }
+    }
+}
+7.sum of squares
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        int result = a*a + b*b;
+        
+        System.out.println(result);
+    }
+}
+8. fibbonacci number
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+        int first = 1;
+        int second = 1;
+        int next = 1;
+        
+        for (int i = 3; i <= N; i++) {
+            next = first + second;
+            first = second;
+            second = next;
+        }
+        
+        System.out.println(next);
+    }
+}
+9.sum of natural numbers
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        
+        int sum = N * (N + 1) / 2;
+        
+        System.out.println(sum);
+    }
+}
+10.range
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        
+        if (a < b && b < c) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
+
